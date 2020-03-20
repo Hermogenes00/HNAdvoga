@@ -166,9 +166,9 @@ public class frmPrincipal extends JFrame{
 		@Override
 		public void mouseClicked(MouseEvent e) {
 			
-			_frmConsultaCliente = new frmConsultaCliente();
-			_frmConsultaCliente.setVisible(true);
-			centro.add(_frmConsultaCliente);
+			_frmCadastroCliente = new frmCadastroCliente();
+			_frmCadastroCliente.setVisible(true);
+			centro.add(_frmCadastroCliente);
 		}
 
 		@Override
