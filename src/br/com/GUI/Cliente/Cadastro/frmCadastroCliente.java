@@ -91,7 +91,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		
 		textField = new JTextField();
 		textField.setBounds(10, 43, 61, 25);
-		textField.setToolTipText("Informe o nome do Cliente");
+		textField.setToolTipText("");
 		textField.setColumns(50);
 		pnTopo.add(textField);
 		
@@ -110,7 +110,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		pnTopo.add(lblNome);
 		
 		textField_2 = new JTextField();
-		textField_2.setToolTipText("Informe o nome do Cliente");
+		textField_2.setToolTipText("");
 		textField_2.setColumns(50);
 		textField_2.setBounds(542, 43, 237, 25);
 		pnTopo.add(textField_2);
@@ -120,7 +120,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		pnTopo.add(lblCpfcnpj);
 		
 		textField_3 = new JTextField();
-		textField_3.setToolTipText("Informe o nome do Cliente");
+		textField_3.setToolTipText("Em caso de pessoa f\u00EDsica, basta repetir o nome do cliente");
 		textField_3.setColumns(50);
 		textField_3.setBounds(10, 96, 374, 25);
 		pnTopo.add(textField_3);
@@ -130,7 +130,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		pnTopo.add(lblNfantasia);
 		
 		textField_4 = new JTextField();
-		textField_4.setToolTipText("Informe o nome do Cliente");
+		textField_4.setToolTipText("");
 		textField_4.setColumns(50);
 		textField_4.setBounds(394, 96, 385, 25);
 		pnTopo.add(textField_4);
@@ -140,7 +140,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		pnTopo.add(lblEmail);
 		
 		textField_10 = new JTextField();
-		textField_10.setToolTipText("Informe o nome do Cliente");
+		textField_10.setToolTipText("");
 		textField_10.setColumns(50);
 		textField_10.setBounds(10, 154, 237, 25);
 		pnTopo.add(textField_10);
@@ -150,7 +150,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		pnTopo.add(lblContato);
 		
 		textField_11 = new JTextField();
-		textField_11.setToolTipText("Informe o nome do Cliente");
+		textField_11.setToolTipText("");
 		textField_11.setColumns(50);
 		textField_11.setBounds(276, 154, 237, 25);
 		pnTopo.add(textField_11);
@@ -160,7 +160,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		pnTopo.add(lblContato_1);
 		
 		textField_12 = new JTextField();
-		textField_12.setToolTipText("Informe o nome do Cliente");
+		textField_12.setToolTipText("");
 		textField_12.setColumns(50);
 		textField_12.setBounds(542, 154, 237, 25);
 		pnTopo.add(textField_12);
@@ -176,7 +176,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		getContentPane().add(pnCentro, BorderLayout.CENTER);
 		
 		textField_6 = new JTextField();
-		textField_6.setToolTipText("Informe o nome do Cliente");
+		textField_6.setToolTipText("");
 		textField_6.setColumns(50);
 		textField_6.setBounds(10, 43, 452, 25);
 		pnCentro.add(textField_6);
@@ -186,7 +186,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		pnCentro.add(lblEndereo);
 		
 		textField_7 = new JTextField();
-		textField_7.setToolTipText("Informe o nome do Cliente");
+		textField_7.setToolTipText("");
 		textField_7.setColumns(50);
 		textField_7.setBounds(10, 101, 145, 25);
 		pnCentro.add(textField_7);
@@ -196,7 +196,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		pnCentro.add(lblCep);
 		
 		textField_8 = new JTextField();
-		textField_8.setToolTipText("Informe o nome do Cliente");
+		textField_8.setToolTipText("");
 		textField_8.setColumns(50);
 		textField_8.setBounds(540, 43, 239, 25);
 		pnCentro.add(textField_8);
@@ -206,7 +206,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		pnCentro.add(lblBairro);
 		
 		textField_9 = new JTextField();
-		textField_9.setToolTipText("Informe o nome do Cliente");
+		textField_9.setToolTipText("Refer\u00EAncias que ajudem na localiza\u00E7\u00E3o do cliente");
 		textField_9.setColumns(50);
 		textField_9.setBounds(165, 101, 614, 25);
 		pnCentro.add(textField_9);
@@ -216,7 +216,7 @@ public class frmCadastroCliente extends JInternalFrame {
 		pnCentro.add(lblReferncias);
 		
 		textField_5 = new JTextField();
-		textField_5.setToolTipText("Informe o nome do Cliente");
+		textField_5.setToolTipText("");
 		textField_5.setColumns(50);
 		textField_5.setBounds(469, 43, 61, 25);
 		pnCentro.add(textField_5);

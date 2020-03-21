@@ -19,6 +19,7 @@ import java.awt.GridBagConstraints;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextPane;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JRadioButton;
@@ -27,12 +28,22 @@ import javax.swing.JToggleButton;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+
+import br.com.GUI.Cliente.Cadastro.frmCadastroCliente;
+import br.com.GUI.Principal.frmPrincipal;
+
 import javax.swing.ListSelectionModel;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
+import java.awt.Component;
+
 import javax.swing.border.CompoundBorder;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.ActionEvent;
 
 public class frmConsultaCliente extends JInternalFrame {
 	private JTextField textField;
@@ -106,13 +117,16 @@ public class frmConsultaCliente extends JInternalFrame {
 		button.setBounds(748, 6, 96, 25);
 		pnTopo.add(button);
 		
-		JButton button_1 = new JButton("Buscar");
-		button_1.setBounds(748, 37, 96, 25);
-		pnTopo.add(button_1);
+		JButton btnAlterar = new JButton("Alterar");
+		btnAlterar.setBounds(748, 37, 96, 25);
+		pnTopo.add(btnAlterar);
 		
-		JButton button_2 = new JButton("Buscar");
-		button_2.setBounds(748, 68, 96, 25);
-		pnTopo.add(button_2);
+		JButton btnDetalhes = new JButton("Detalhes");
+		
+		btnDetalhes.setBounds(748, 68, 96, 25);
+		
+		btnDetalhes.addMouseListener(new btnDetalhesListener());
+		pnTopo.add(btnDetalhes);
 		
 		JPanel pnCentro = new JPanel();
 		getContentPane().add(pnCentro, BorderLayout.CENTER);
@@ -134,5 +148,49 @@ public class frmConsultaCliente extends JInternalFrame {
 		));
 		pnCentro.add(tabelaCliente);
 
+	}
+	
+	private class btnDetalhesListener implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			
+			//JOptionPane.showMessageDialog(null, "Clicou");
+			
+			frmCadastroCliente frm = new frmCadastroCliente();
+			
+			frm.setVisible(true);
+			
+			frmPrincipal._desktopPane.add(frm);
+			
+			
+			
+			
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
 	}
 }

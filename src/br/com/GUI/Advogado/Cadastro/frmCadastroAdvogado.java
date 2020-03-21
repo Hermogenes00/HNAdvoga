@@ -101,7 +101,7 @@ public class frmCadastroAdvogado extends JInternalFrame {
 		pnTopo.add(lblNewLabel);
 		
 		textField_1 = new JTextField();
-		textField_1.setToolTipText("Informe o nome do Cliente");
+		textField_1.setToolTipText("Nome do Advogado");
 		textField_1.setColumns(50);
 		textField_1.setBounds(81, 43, 452, 25);
 		pnTopo.add(textField_1);
@@ -111,7 +111,7 @@ public class frmCadastroAdvogado extends JInternalFrame {
 		pnTopo.add(lblNome);
 		
 		textField_2 = new JTextField();
-		textField_2.setToolTipText("Informe o nome do Cliente");
+		textField_2.setToolTipText("Cpf/Cnpj");
 		textField_2.setColumns(50);
 		textField_2.setBounds(542, 43, 237, 25);
 		pnTopo.add(textField_2);
@@ -121,7 +121,7 @@ public class frmCadastroAdvogado extends JInternalFrame {
 		pnTopo.add(lblCpfcnpj);
 		
 		textField_3 = new JTextField();
-		textField_3.setToolTipText("Informe o nome do Cliente");
+		textField_3.setToolTipText("Nome Fantasia, caso seja pessoa f\u00EDsica bastar repetir o nome");
 		textField_3.setColumns(50);
 		textField_3.setBounds(10, 96, 374, 25);
 		pnTopo.add(textField_3);
@@ -207,7 +207,7 @@ public class frmCadastroAdvogado extends JInternalFrame {
 		pnCentro.add(lblBairro);
 		
 		textField_9 = new JTextField();
-		textField_9.setToolTipText("Informe o nome do Cliente");
+		textField_9.setToolTipText("Refer\u00EAncias que ajudem na localiza\u00E7\u00E3o.");
 		textField_9.setColumns(50);
 		textField_9.setBounds(165, 101, 614, 25);
 		pnCentro.add(textField_9);
