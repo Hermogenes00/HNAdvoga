@@ -10,6 +10,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.awt.event.WindowStateListener;
+import java.time.chrono.JapaneseDate;
 
 import javax.swing.ImageIcon;
 import javax.swing.JDesktopPane;
@@ -28,6 +29,7 @@ import br.com.GUI.Cliente.Consulta.frmConsultaCliente;
 
 
 
+
 public class frmPrincipal extends JFrame{
 
 
@@ -36,9 +38,10 @@ public class frmPrincipal extends JFrame{
 	private frmCadastroAdvogado _frmCadastroAdvogado;
 	private frmConsultaCliente _frmConsultaCliente;
 	private frmConsultaAdvogado _frmConsultaAdvogado;
+
 	public static JDesktopPane _desktopPane = new JDesktopPane();
 	//Composição deste formulário (JPanel,JInternalFrame ...)
-	
+
 	Topo topo;
 
 	public frmPrincipal()
@@ -114,7 +117,7 @@ public class frmPrincipal extends JFrame{
 
 	private void inicializarComponentes() {
 
-		
+
 		topo = new Topo();
 		_desktopPane.setBackground(Color.gray);
 		super.setLayout(new BorderLayout());
@@ -134,14 +137,25 @@ public class frmPrincipal extends JFrame{
 		JMenu botaoRelatorio = new JMenu("Relatorio");
 		JMenu botaoFinanceiro = new JMenu("Financeiro");
 		JMenu botaoBloquear = new JMenu("Bloquear");
+		JMenu botaoOrdemServico = new JMenu("Ordem de Serviço");
 
+		//Botões de Cadastros
 		JMenuItem botaoClienteCadastro = new JMenuItem("Cadastrar");
 		JMenuItem botaoAdvogadoCadastro = new JMenuItem("Cadastrar");
 		JMenuItem botaoProcessoCadastro = new JMenuItem("Cadastrar");
 
+		//Botões de Consultas
 		JMenuItem botaoClienteConsulta = new JMenuItem("Consultar");
 		JMenuItem botaoAdvogadoConsulta = new JMenuItem("Consultar");
 		JMenuItem botaoProcessConsulta = new JMenuItem("Consultar");
+		
+		
+		JMenuItem botaoRelatorioCliente = new JMenuItem("Cliente");
+		JMenuItem botaoRelatorioAdvogado = new JMenuItem("Advogado");
+		JMenuItem botaoRelatorioProcesso = new JMenuItem("Processo");
+		JMenuItem botaoRelatorioOrdemServico = new JMenuItem("Ordem de Serviço");
+		JMenuItem botaoRelatorioFinanceiro = new JMenuItem("Financeiro");
+		
 
 		public Topo(){
 
@@ -163,9 +177,20 @@ public class frmPrincipal extends JFrame{
 			botaoProcesso.add(botaoProcessoCadastro);
 			botaoProcesso.add(botaoProcessConsulta);
 
+			
+			
+			//Botões de relatórios
+			botaoRelatorio.add(botaoRelatorioCliente);
+			botaoRelatorio.add(botaoRelatorioAdvogado);
+			botaoRelatorio.add(botaoRelatorioProcesso);
+			botaoRelatorio.add(botaoRelatorioOrdemServico);
+			botaoRelatorio.add(botaoRelatorioFinanceiro);
+			
+			
 			this.add(botaoCliente);
 			this.add(botaoAdvogado);
 			this.add(botaoProcesso);
+			this.add(botaoOrdemServico);
 			this.add(botaoRelatorio);
 			this.add(botaoFinanceiro);
 			this.add(botaoBloquear);
@@ -173,10 +198,10 @@ public class frmPrincipal extends JFrame{
 
 			botaoClienteCadastro.addActionListener(new botaoClienteCadastroListener());
 			botaoClienteConsulta.addActionListener(new botaoClienteConsultaListener());
-			
+
 			botaoAdvogadoCadastro.addActionListener(new botaoAdvogadoCadastroListener());
 			botaoAdvogadoConsulta.addActionListener(new botaoAdvogadoConsultaListener());
-			
+
 		}
 
 		void configurandoBotao()
@@ -187,6 +212,7 @@ public class frmPrincipal extends JFrame{
 			botaoRelatorio.setIcon(new ImageIcon(getClass().getResource("/br/com/Imagens/icons8-histórico-médico-40.png")));
 			botaoFinanceiro.setIcon(new ImageIcon(getClass().getResource("/br/com/Imagens/icons8-restituição-40.png")));
 			botaoBloquear.setIcon(new ImageIcon(getClass().getResource("/br/com/Imagens/icons8-bloquear-modo-paisagem-40.png")));
+			botaoOrdemServico.setIcon(new ImageIcon(getClass().getResource("/br/com/Imagens/icons8-serviço-de-limpeza-40.png")));
 		}
 	}
 
@@ -198,6 +224,7 @@ public class frmPrincipal extends JFrame{
 			_frmCadastroCliente = new frmCadastroCliente();
 			_frmCadastroCliente.setVisible(true);
 			_desktopPane.add(_frmCadastroCliente);
+			_frmCadastroCliente.moveToFront();
 
 		}
 
@@ -208,7 +235,9 @@ public class frmPrincipal extends JFrame{
 		public void actionPerformed(ActionEvent e) {
 			_frmConsultaCliente = new frmConsultaCliente();
 			_frmConsultaCliente.setVisible(true);
+			
 			_desktopPane.add(_frmConsultaCliente);
+			_frmConsultaCliente.moveToFront();
 
 		}
 
@@ -220,6 +249,7 @@ public class frmPrincipal extends JFrame{
 			_frmCadastroAdvogado = new frmCadastroAdvogado();
 			_frmCadastroAdvogado.setVisible(true);
 			_desktopPane.add(_frmCadastroAdvogado);
+			_frmCadastroAdvogado.moveToFront();
 
 		}
 
@@ -233,6 +263,7 @@ public class frmPrincipal extends JFrame{
 			_frmConsultaAdvogado = new frmConsultaAdvogado();
 			_frmConsultaAdvogado.setVisible(true);
 			_desktopPane.add(_frmConsultaAdvogado);
+			_frmConsultaAdvogado.moveToFront();
 		}
 
 	}
