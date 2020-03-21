@@ -10,6 +10,7 @@ Sistema para escritórios de advocacia.
 	<ul>Cadastro & Consulta de Advogadas</ul>
 	<ul>Cadastro & Consulta de Processos</ul>
 	<ul>Cadastro & Consulta de Ordens de Serviços</ul>
+	<ul>Possibilidade de utilização de múltiplas janelas</ul>
 	<li>
 		Emissão de Relatórios
 			<ul>Clientes</ul>
@@ -18,5 +19,5 @@ Sistema para escritórios de advocacia.
 			<ul>Ordens de Serviços</ul>
 	</li>
 
-	<ul>Sistema com múltiplas janelas</ul>
+	
 </li>
