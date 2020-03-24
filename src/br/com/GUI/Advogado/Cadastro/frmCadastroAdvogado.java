@@ -20,6 +20,9 @@ import javax.swing.JLabel;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import java.awt.Font;
 
 public class frmCadastroAdvogado extends JInternalFrame {
 	
@@ -123,21 +126,21 @@ public class frmCadastroAdvogado extends JInternalFrame {
 		textField_3 = new JTextField();
 		textField_3.setToolTipText("Nome Fantasia, caso seja pessoa f\u00EDsica bastar repetir o nome");
 		textField_3.setColumns(50);
-		textField_3.setBounds(10, 96, 374, 25);
+		textField_3.setBounds(10, 96, 141, 25);
 		pnTopo.add(textField_3);
 		
-		JLabel lblNfantasia = new JLabel("N.Fantasia");
+		JLabel lblNfantasia = new JLabel("OAB");
 		lblNfantasia.setBounds(10, 74, 78, 14);
 		pnTopo.add(lblNfantasia);
 		
 		textField_4 = new JTextField();
 		textField_4.setToolTipText("Informe o nome do Cliente");
 		textField_4.setColumns(50);
-		textField_4.setBounds(394, 96, 385, 25);
+		textField_4.setBounds(160, 96, 385, 25);
 		pnTopo.add(textField_4);
 		
 		JLabel lblEmail = new JLabel("Email");
-		lblEmail.setBounds(394, 74, 46, 14);
+		lblEmail.setBounds(160, 74, 46, 14);
 		pnTopo.add(lblEmail);
 		
 		textField_10 = new JTextField();
@@ -146,7 +149,7 @@ public class frmCadastroAdvogado extends JInternalFrame {
 		textField_10.setBounds(10, 154, 237, 25);
 		pnTopo.add(textField_10);
 		
-		JLabel lblContato = new JLabel("Contato 1");
+		JLabel lblContato = new JLabel("Celular");
 		lblContato.setBounds(10, 132, 97, 14);
 		pnTopo.add(lblContato);
 		
@@ -156,18 +159,18 @@ public class frmCadastroAdvogado extends JInternalFrame {
 		textField_11.setBounds(276, 154, 237, 25);
 		pnTopo.add(textField_11);
 		
-		JLabel lblContato_1 = new JLabel("Contato 2");
+		JLabel lblContato_1 = new JLabel("Celular");
 		lblContato_1.setBounds(276, 132, 97, 14);
 		pnTopo.add(lblContato_1);
 		
 		textField_12 = new JTextField();
 		textField_12.setToolTipText("Informe o nome do Cliente");
 		textField_12.setColumns(50);
-		textField_12.setBounds(542, 154, 237, 25);
+		textField_12.setBounds(552, 96, 227, 25);
 		pnTopo.add(textField_12);
 		
-		JLabel lblContato_2 = new JLabel("Contato 3");
-		lblContato_2.setBounds(542, 132, 97, 14);
+		JLabel lblContato_2 = new JLabel("Telefone");
+		lblContato_2.setBounds(552, 74, 97, 14);
 		pnTopo.add(lblContato_2);
 		
 		JPanel pnCentro = new JPanel();
@@ -225,6 +228,16 @@ public class frmCadastroAdvogado extends JInternalFrame {
 		JLabel lblN = new JLabel("N\u00BA");
 		lblN.setBounds(469, 21, 46, 14);
 		pnCentro.add(lblN);
+		
+		JLabel label = new JLabel("Situa\u00E7\u00E3o");
+		label.setBounds(542, 137, 97, 14);
+		pnCentro.add(label);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Ativo", "Inativo"}));
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		comboBox.setBounds(542, 151, 237, 31);
+		pnCentro.add(comboBox);
 
 	}
 }

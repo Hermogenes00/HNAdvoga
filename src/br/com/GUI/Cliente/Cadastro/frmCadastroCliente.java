@@ -20,6 +20,9 @@ import javax.swing.JLabel;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import java.awt.Font;
+import javax.swing.DefaultComboBoxModel;
 
 public class frmCadastroCliente extends JInternalFrame {
 	private JTextField textField;
@@ -224,6 +227,16 @@ public class frmCadastroCliente extends JInternalFrame {
 		JLabel lblN = new JLabel("N\u00BA");
 		lblN.setBounds(469, 21, 46, 14);
 		pnCentro.add(lblN);
+		
+		JLabel label = new JLabel("Situa\u00E7\u00E3o");
+		label.setBounds(542, 137, 97, 14);
+		pnCentro.add(label);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Ativo", "Inativo"}));
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		comboBox.setBounds(542, 151, 237, 31);
+		pnCentro.add(comboBox);
 
 	}
 }
