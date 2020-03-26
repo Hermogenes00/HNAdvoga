@@ -39,6 +39,7 @@ public class frmCadastroAdvogado extends JInternalFrame {
 	private JTextField textField_11;
 	private JTextField textField_12;
 	private JTextField textField_5;
+	
 
 	/**
 	 * Launch the application.

@@ -144,7 +144,7 @@ public class frmConsultaCliente extends JInternalFrame {
 			if (!frmPrincipal.verificaFormularioAberto(frmCadastroCliente.class.getSimpleName())) {
 
 				frmCadastroCliente frm = new frmCadastroCliente();
-				frmPrincipal._desktopPane.add(frm);
+				frmPrincipal.desktopPane.add(frm);
 				frm.setVisible(true);				
 				frm.moveToFront();				
 			}
