@@ -1,15 +1,11 @@
 package br.com.GUI.Login;
 
 import java.awt.EventQueue;
+import java.awt.Font;
 
+import javax.swing.JButton;
 import javax.swing.JInternalFrame;
 import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.Font;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import javax.swing.event.InternalFrameAdapter;
 import javax.swing.event.InternalFrameEvent;
 
@@ -32,23 +28,20 @@ public class frmLogin extends JInternalFrame {
 			}
 		});
 	}
-		
 
 	/**
 	 * Create the frame.
 	 */
 	public frmLogin() {
-		
+
 		addInternalFrameListener(new InternalFrameAdapter() {
 			@Override
 			public void internalFrameClosing(InternalFrameEvent e) {
-			    dispose();
-			    
+				dispose();
+
 			}
 		});
-		
-		
-		
+
 		setTitle("Login");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
@@ -71,9 +64,6 @@ public class frmLogin extends JInternalFrame {
 		btnNewButton.setBounds(6, 181, 426, 39);
 		getContentPane().add(btnNewButton);
 
-
-
 	}
-
 
 }

@@ -1,35 +1,27 @@
 package br.com.GUI.Processo.Cadastro;
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
-import javax.swing.JInternalFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import javax.swing.JTabbedPane;
-import java.awt.FlowLayout;
-import javax.swing.JComboBox;
-import javax.swing.JTextField;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EtchedBorder;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JTextArea;
+import javax.swing.JComboBox;
 import javax.swing.JEditorPane;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JInternalFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import java.awt.Color;
-import java.awt.SystemColor;
-import javax.swing.UIManager;
+import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
-import javax.swing.ScrollPaneConstants;
+import javax.swing.UIManager;
+import javax.swing.border.EtchedBorder;
+import javax.swing.table.DefaultTableModel;
+
+import br.com.Constantes.PETICAO;
 
 public class frmCadastroProcesso extends JInternalFrame {
-	
+
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -69,6 +61,7 @@ public class frmCadastroProcesso extends JInternalFrame {
 	private JTextField textField_36;
 	private JTextField textField_37;
 	private JTextField textField_38;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -86,7 +79,6 @@ public class frmCadastroProcesso extends JInternalFrame {
 		});
 	}
 
-	
 	/**
 	 * Create the frame.
 	 */
@@ -283,7 +275,7 @@ public class frmCadastroProcesso extends JInternalFrame {
 		JPanel panel_5 = new JPanel();
 		panel_5.setLayout(null);
 		panel_5.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		panel_5.setBounds(6, 84, 709, 356);
+		panel_5.setBounds(6, 84, 709, 314);
 		panel_1.add(panel_5);
 
 		JLabel lblCpfcnpj = new JLabel("Cpf/Cnpj");
@@ -417,23 +409,50 @@ public class frmCadastroProcesso extends JInternalFrame {
 		panel_2.add(lblDataDaPeticao);
 
 		JEditorPane editorPane = new JEditorPane();
-		editorPane.setBounds(6, 80, 709, 360);
+		editorPane.setBounds(6, 83, 705, 69);
 		panel_2.add(editorPane);
 
 		JLabel lblAnotaes = new JLabel("Anota\u00E7\u00F5es");
-		lblAnotaes.setBounds(6, 63, 122, 16);
+		lblAnotaes.setBounds(6, 66, 122, 16);
 		panel_2.add(lblAnotaes);
 
+		JComboBox comboBox_3 = new JComboBox();
+
+		comboBox_3.setModel(new DefaultComboBoxModel(PETICAO.values()));
+
+		comboBox_3.setBounds(408, 26, 307, 28);
+
+		panel_2.add(comboBox_3);
+
+		JLabel lblPetio = new JLabel("Documento Solicitado");
+		lblPetio.setBounds(408, 6, 130, 16);
+		panel_2.add(lblPetio);
+
+		JButton btnGravarPetio = new JButton("Gravar Peti\u00E7\u00E3o");
+		btnGravarPetio.setBounds(6, 159, 705, 38);
+		panel_2.add(btnGravarPetio);
+
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+				new Object[][] { { null, null, null, null, null, null, null },
+						{ null, null, null, null, null, null, null }, { null, null, null, null, null, null, null },
+						{ null, null, null, null, null, null, null }, { null, null, null, null, null, null, null },
+						{ null, null, null, null, null, null, null }, },
+				new String[] { "New column", "New column", "New column", "New column", "New column", "New column",
+						"New column" }));
+		table.setBounds(6, 390, 705, -182);
+		panel_2.add(table);
+
 		JPanel panel_3 = new JPanel();
-		tabbedPane.addTab("Parte Contrária", null, panel_3, null);
+		tabbedPane.addTab("Réu", null, panel_3, null);
 		panel_3.setLayout(null);
 
 		JButton button = new JButton("Buscar");
 		button.setBounds(67, 6, 79, 28);
 		panel_3.add(button);
 
-		JLabel lblContrrio = new JLabel("Contr\u00E1rio");
-		lblContrrio.setBounds(6, 12, 66, 16);
+		JLabel lblContrrio = new JLabel("R\u00E9u");
+		lblContrrio.setBounds(6, 12, 52, 16);
 		panel_3.add(lblContrrio);
 
 		textField_27 = new JTextField();
@@ -444,7 +463,7 @@ public class frmCadastroProcesso extends JInternalFrame {
 		JPanel panel_6 = new JPanel();
 		panel_6.setLayout(null);
 		panel_6.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		panel_6.setBounds(6, 65, 709, 356);
+		panel_6.setBounds(6, 65, 709, 333);
 		panel_3.add(panel_6);
 
 		JLabel label = new JLabel("Cpf/Cnpj");
@@ -559,41 +578,40 @@ public class frmCadastroProcesso extends JInternalFrame {
 		JButton btnNewButton_4 = new JButton("Incluir Anota\u00E7\u00E3o");
 		btnNewButton_4.setBounds(6, 105, 709, 28);
 		panel_7.add(btnNewButton_4);
-		
-		//102
-		
+
+		// 102
+
 		JTable tabela = new JTable();
 		tabela.setShowVerticalLines(true);
 		tabela.setShowHorizontalLines(true);
-		
-		tabela.setSize(709, 248);
+
+		tabela.setSize(709, 228);
 		tabela.setLocation(6, 150);
 		tabela.setBorder(UIManager.getBorder("TitledBorder.border"));
 		tabela.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-		
-		
+
 		DefaultTableModel modeloTabela;
-		
+
 		modeloTabela = new DefaultTableModel();
-		
-		modeloTabela.addColumn(new String[] {"Data","Anotação"});
-	   
-		modeloTabela.addRow(new String[] {"Data","Anotação"});
-		modeloTabela.addRow(new String[]{"05/04/2020","Anotação"});
-		modeloTabela.addRow(new String[]{"05/04/2020","Anotação"});
-		modeloTabela.addRow(new String[]{"05/04/2020","Anotação"});
-		modeloTabela.addRow(new String[]{"05/04/2020","Anotação"});
-		
-		modeloTabela.addColumn(new String[] {"Data","Anotação"});
-		
-	    tabela.setModel(modeloTabela);
-		
-	    tabela.getColumnModel().getColumn(0).setPreferredWidth(5);
-	    
-	    tabela.getColumnModel().getColumn(1).setPreferredWidth(100);
-	    
+
+		modeloTabela.addColumn(new String[] { "Data", "Anotação" });
+
+		modeloTabela.addRow(new String[] { "Data", "Anotação" });
+		modeloTabela.addRow(new String[] { "05/04/2020", "Anotação" });
+		modeloTabela.addRow(new String[] { "05/04/2020", "Anotação" });
+		modeloTabela.addRow(new String[] { "05/04/2020", "Anotação" });
+		modeloTabela.addRow(new String[] { "05/04/2020", "Anotação" });
+
+		modeloTabela.addColumn(new String[] { "Data", "Anotação" });
+
+		tabela.setModel(modeloTabela);
+
+		tabela.getColumnModel().getColumn(0).setPreferredWidth(5);
+
+		tabela.getColumnModel().getColumn(1).setPreferredWidth(100);
+
 		panel_7.add(tabela);
-		
+
 		JPanel panel_8 = new JPanel();
 		panel_8.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		getContentPane().add(panel_8, BorderLayout.SOUTH);
@@ -607,6 +625,5 @@ public class frmCadastroProcesso extends JInternalFrame {
 		JButton btnNewButton_3 = new JButton("Sair");
 		panel_8.add(btnNewButton_3);
 
-		
 	}
 }

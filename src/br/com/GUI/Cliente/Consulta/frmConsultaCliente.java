@@ -7,24 +7,21 @@ import java.awt.Font;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JInternalFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.BevelBorder;
-import javax.swing.border.CompoundBorder;
+import javax.swing.border.EtchedBorder;
 import javax.swing.border.SoftBevelBorder;
 import javax.swing.table.DefaultTableModel;
 
 import br.com.GUI.Cliente.Cadastro.frmCadastroCliente;
 import br.com.GUI.Principal.frmPrincipal;
-import javax.swing.border.EtchedBorder;
-import javax.swing.ImageIcon;
-
 
 public class frmConsultaCliente extends JInternalFrame {
 	private JTextField textField;
@@ -52,13 +49,14 @@ public class frmConsultaCliente extends JInternalFrame {
 	 */
 	public frmConsultaCliente() {
 
-		setFrameIcon(new ImageIcon(frmConsultaCliente.class.getResource("/br/com/Imagens/icons8-funcion\u00E1rio-homem-40.png")));
+		setFrameIcon(new ImageIcon(
+				frmConsultaCliente.class.getResource("/br/com/Imagens/icons8-funcion\u00E1rio-homem-40.png")));
 		setResizable(true);
 
 		setTitle("Consulta Clientes");
 		setIconifiable(true);
 
-		//setClosed(true);
+		// setClosed(true);
 
 		setClosable(true);
 
@@ -69,7 +67,7 @@ public class frmConsultaCliente extends JInternalFrame {
 		JPanel pnTopo = new JPanel();
 		pnTopo.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
 
-		pnTopo.setPreferredSize(new Dimension(super.getWidth(),100));
+		pnTopo.setPreferredSize(new Dimension(super.getWidth(), 100));
 		pnTopo.setLayout(null);
 		getContentPane().add(pnTopo, BorderLayout.NORTH);
 
@@ -122,34 +120,27 @@ public class frmConsultaCliente extends JInternalFrame {
 		tabelaCliente.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 		tabelaCliente.setModel(new DefaultTableModel(
-				new Object[][] {
-					{"New column", "New column", "New column", "New column", "New column"},
-					{"New column", "New column", "New column", "New column", "New column"},
-					{"New column", "New column", "New column", "New column", "New column"},
-				},
-				new String[] {
-						"New column", "New column", "New column", "New column", "New column"
-				}
-				));
+				new Object[][] { { "New column", "New column", "New column", "New column", "New column" },
+						{ "New column", "New column", "New column", "New column", "New column" },
+						{ "New column", "New column", "New column", "New column", "New column" }, },
+				new String[] { "New column", "New column", "New column", "New column", "New column" }));
 		pnCentro.add(tabelaCliente);
 
 	}
 
-	private class btnDetalhesListener implements MouseListener{
+	private class btnDetalhesListener implements MouseListener {
 
 		@Override
 		public void mouseClicked(MouseEvent e) {
 
-			//Verifica se o formulário está aberto.
+			// Verifica se o formulário está aberto.
 			if (!frmPrincipal.verificaFormularioAberto(frmCadastroCliente.class.getSimpleName())) {
 
 				frmCadastroCliente frm = new frmCadastroCliente();
 				frmPrincipal.desktopPane.add(frm);
-				frm.setVisible(true);				
-				frm.moveToFront();				
+				frm.setVisible(true);
+				frm.moveToFront();
 			}
-
-
 
 		}
 
